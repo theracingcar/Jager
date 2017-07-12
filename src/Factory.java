@@ -54,18 +54,33 @@ public class Factory {
         return output;
     }
 
-    static public Store createStore(){
-
-        return null;
-
-    }
 
     static public Employee createEmployee(String firstname, String lastname, String SID){
 
         Employee output = new Employee(firstname, lastname);
-        output.UID = "U" + UUID.randomUUID();
+        String id = "U" + UUID.randomUUID();
+        MainPage.UID.add(id);
+        output.UID = id;
+
+        MainPage.MAIN.get(SID).employees.put(id,output);
 
         return output;
+
+    }
+
+    static public Store createStore(String name){
+        Store output = new Store(name);
+
+        String id = "S" + UUID.randomUUID();
+
+        output.SID = id;
+
+        MainPage.SID.add(id);
+
+        MainPage.MAIN.put(id, output);
+
+        return output;
+
 
     }
 }

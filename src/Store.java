@@ -10,6 +10,7 @@ public class Store {
 
     public Store(String name){
         this.name = name;
+        this.employees = new HashMap<>();
 
     }
 }
