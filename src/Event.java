@@ -1,21 +1,21 @@
 /**
  * Created by Rory on 7/2/2017.
  */
-public class Job {
-    public boolean shift;
+public class Event {
+    public boolean occupied;
     public String type;
     public String location;
     public int time;
 
-    Job(boolean shift, String type, String location, int time){
-        this.shift = shift;
+    Event(boolean occupied, String type, String location, int time){
+        this.occupied = occupied;
         this.type = type;
         this.location = location;
         this.time = time;
     }
 
-    public boolean getShift(){
-        return shift;
+    public boolean getOccupied(){
+        return occupied;
     }
 
     public String getType(){
@@ -29,26 +29,27 @@ public class Job {
     public int getTime() { return time;}
 
     public void clear() {
-        shift = false;
+        occupied = false;
         type = null;
         location = null;
     }
 
-    public void addJob(String type, String location, int time) {
-
+    public void addJob(String type, String location) {
         this.location = location;
         this.type = type;
-        this.time = time;
-        this.shift = true;
-
+        this.occupied = true;
     }
 
     public void removeJob() {
-
         this.location = null;
         this.type = null;
-        this.shift = false;
+        this.occupied = false;
+    }
 
+    public void notAvailable()  {
+        this.occupied = true;
+        this.location = null;
+        this.type = null;
     }
 
 

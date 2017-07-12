@@ -25,7 +25,7 @@ public class Week extends ArrayList<Day> {
         for(int a = 0; a < 24; a++ ){
             System.out.print("|   " + this.get(0).get(a).getTime() + "   |");
         for(Day i : this){
-            System.out.print(" " + i.get(a).getShift() + "  |");
+            System.out.print(" " + i.get(a).getOccupied() + "  |");
         }
             System.out.println();
         }

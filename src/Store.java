@@ -13,4 +13,14 @@ public class Store {
         this.employees = new HashMap<>();
 
     }
+
+    public void print(){
+        System.out.println("Store Name: " + name);
+        System.out.println("Store ID: " + SID);
+        System.out.println("Employees:");
+        for(Employee i : employees.values()){
+            i.print();
+        }
+
+    }
 }
