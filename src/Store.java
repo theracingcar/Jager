@@ -1,3 +1,5 @@
+import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -6,11 +8,11 @@ import java.util.HashMap;
 public class Store {
     public String name;
     public String SID;
-    public HashMap<String, Employee> employees;
+    public ArrayList<String> employees;
 
     public Store(String name){
         this.name = name;
-        this.employees = new HashMap<>();
+        this.employees = new ArrayList<>();
 
     }
 
@@ -18,8 +20,8 @@ public class Store {
         System.out.println("Store Name: " + name);
         System.out.println("Store ID: " + SID);
         System.out.println("Employees:");
-        for(Employee i : employees.values()){
-            i.print();
+        for(String i : employees){
+            MainPage.MAINU.get(i).print();
         }
 
     }

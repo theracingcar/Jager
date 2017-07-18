@@ -1,5 +1,5 @@
-import sun.applet.Main;
-
+import Factory.Factory;
+import Users.Employee;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -13,13 +13,22 @@ public class MainPage {
 
    static public ArrayList<String> UID = new ArrayList<String>();
 
-   static public HashMap<String, Store> MAIN = new HashMap<>();
+   static public HashMap<String, Store> MAINS = new HashMap<>();
 
-    static public void printMain(){
-        for(Store i : MAIN.values()){
+   static public HashMap<String, Employee> MAINU = new HashMap<>();
+
+    static public void printMAINS(){
+        for(Store i : MAINS.values()){
             i.print();
         }
     }
+
+    static public void printMAINU(){
+        for(Employee i : MAINU.values()){
+            i.print();
+        }
+    }
+
     static public void printID(ArrayList<String> array){
         for (String i : array){
             System.out.println(i);
@@ -36,7 +45,8 @@ public class MainPage {
 
         Factory.createEmployee("Test1", "Test2", SID.get(0));
 
-        printMain();
+        printMAINS();
+        printMAINU();
 
 
     }

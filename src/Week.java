@@ -29,8 +29,7 @@ public class Week extends ArrayList<Day> {
         }
             System.out.println();
         }
-        System.out.println();
-        System.out.println();
+
 
     }
 

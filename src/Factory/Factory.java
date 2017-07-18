@@ -1,3 +1,7 @@
+package Factory;
+
+import Users.Employee;
+
 import java.util.UUID;
 
 /**
@@ -59,10 +63,16 @@ public class Factory {
 
         Employee output = new Employee(firstname, lastname);
         String id = "U" + UUID.randomUUID();
+
+        while(MainPage.UID.contains(id)){
+             id = "U" + UUID.randomUUID();
+        }
+
         MainPage.UID.add(id);
         output.UID = id;
 
-        MainPage.MAIN.get(SID).employees.put(id,output);
+        MainPage.MAINS.get(SID).employees.add(id);
+        MainPage.MAINU.put(id, output);
 
         return output;
 
@@ -73,11 +83,15 @@ public class Factory {
 
         String id = "S" + UUID.randomUUID();
 
+        while(MainPage.SID.contains(id)){
+            id = "S" + UUID.randomUUID();
+        }
+
         output.SID = id;
 
         MainPage.SID.add(id);
 
-        MainPage.MAIN.put(id, output);
+        MainPage.MAINS.put(id, output);
 
         return output;
 
