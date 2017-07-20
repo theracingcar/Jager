@@ -1,26 +1,25 @@
 package Users;
 import Factory.Factory;
 
+import java.util.Date;
+
 /**
  * Created by Rory on 7/9/2017.
  */
 public class Employee extends User {
-    public String UID;
-    public String firstname;
-    public String lastname;
-//    public Week week;
+
     public double experience;
     public int praise;
+    public String SID;
 
-    public Employee(String firstname, String lastname){
 
-        this.firstname = firstname;
-        this.lastname = lastname;
-//        this.week = Factory.createWeek();
-        this.experience = 0;
+    public Employee() {
+
         this.praise = 0;
+        this.experience = 0;
 
     }
+
 
     public void print(){
         System.out.println("User ID: " + UID);
@@ -32,6 +31,10 @@ public class Employee extends User {
         System.out.println("Praises: " + praise);
 
         System.out.println();
+    }
+
+    public void setSID(String input){
+        this.SID = input;
     }
 
     public void praise(){

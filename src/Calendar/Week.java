@@ -1,3 +1,5 @@
+package Calendar;
+
 import java.util.ArrayList;
 
 /**
@@ -6,7 +8,7 @@ import java.util.ArrayList;
 public class Week extends ArrayList<Day> {
 
 
-    Week(){}
+    public Week(){}
 
 
     public void addJob(int day, String type, String location, int time){

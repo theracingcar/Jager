@@ -1,6 +1,8 @@
-import java.util.ArrayDeque;
+package Store;
+
+import Main.MainPage;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * Created by Rory on 7/9/2017.
@@ -17,8 +19,8 @@ public class Store {
     }
 
     public void print(){
-        System.out.println("Store Name: " + name);
-        System.out.println("Store ID: " + SID);
+        System.out.println("Store.Store Name: " + name);
+        System.out.println("Store.Store ID: " + SID);
         System.out.println("Employees:");
         for(String i : employees){
             MainPage.MAINU.get(i).print();

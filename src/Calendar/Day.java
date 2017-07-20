@@ -1,3 +1,7 @@
+package Calendar;
+
+import Calendar.Event;
+
 import java.util.ArrayList;
 
 /**
@@ -7,7 +11,7 @@ public class Day extends ArrayList<Event> {
     public String name;
     public boolean weekend;
 
-    Day(String name, boolean weekend){
+    public Day(String name, boolean weekend){
         this.name = name;
         this.weekend = weekend;
     }

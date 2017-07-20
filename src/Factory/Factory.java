@@ -1,7 +1,9 @@
 package Factory;
 
-import Users.Employee;
-
+import Calendar.*;
+import Users.*;
+import Main.*;
+import Store.*;
 import java.util.UUID;
 
 /**
@@ -61,7 +63,7 @@ public class Factory {
 
     static public Employee createEmployee(String firstname, String lastname, String SID){
 
-        Employee output = new Employee(firstname, lastname);
+        Employee output = new Employee();
         String id = "U" + UUID.randomUUID();
 
         while(MainPage.UID.contains(id)){

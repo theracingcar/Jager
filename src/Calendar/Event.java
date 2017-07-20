@@ -1,3 +1,5 @@
+package Calendar;
+
 /**
  * Created by Rory on 7/2/2017.
  */
@@ -7,7 +9,7 @@ public class Event {
     public String location;
     public int time;
 
-    Event(boolean occupied, String type, String location, int time){
+    public Event(boolean occupied, String type, String location, int time){
         this.occupied = occupied;
         this.type = type;
         this.location = location;

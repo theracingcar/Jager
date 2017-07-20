@@ -1,3 +1,6 @@
+package Main;
+
+import Store.Store;
 import Factory.Factory;
 import Users.Employee;
 import java.util.ArrayList;
@@ -8,6 +11,10 @@ import java.util.HashMap;
  */
 
 public class MainPage {
+
+    //TODO Website
+    //TODO Security
+
 
    static public ArrayList<String> SID = new ArrayList<String>();
 
